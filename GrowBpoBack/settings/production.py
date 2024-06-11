@@ -6,7 +6,7 @@ ALLOWED_HOSTS = ['growbpo.com', '13.59.176.156']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'jango.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('PRODUCTION_DB_NAME'),
         'USER': os.getenv('PRODUCTION_DB_USER'),
         'PASSWORD': os.getenv('PRODUCTION_DB_PASSWORD'),
