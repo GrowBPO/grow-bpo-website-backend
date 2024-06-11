@@ -7,11 +7,11 @@ ALLOWED_HOSTS = ['growbpo.com', '13.59.176.156']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PRODUTION_DB_NAME'),
-        'USER': os.getenv('PRODUTION_DB_USER'),
-        'PASSWORD': os.getenv('PRODUTION_DB_PASSWORD'),
-        'HOST': os.getenv('PRODUTION_DB_HOST'),
-        'PORT': os.getenv('PRODUTION_DB_PORT'),
+        'NAME': os.getenv('PRODUCTION_DB_NAME'),
+        'USER': os.getenv('PRODUCTION_DB_USER'),
+        'PASSWORD': os.getenv('PRODUCTION_DB_PASSWORD'),
+        'HOST': os.getenv('PRODUCTION_DB_HOST'),
+        'PORT': os.getenv('PRODUCTION_DB_PORT'),
     }
 }
 
