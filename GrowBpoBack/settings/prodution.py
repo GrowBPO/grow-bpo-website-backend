@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['growbpo.com']
+ALLOWED_HOSTS = ['growbpo.com', '13.59.176.156']
 
 DATABASES = {
     'default': {
