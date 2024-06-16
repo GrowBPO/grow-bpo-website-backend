@@ -172,8 +172,8 @@ class RedefinePasswordView(GenericAPIView):
             reset.save()
 
             # Constrói a url exclusiva para a redefinição de senha
-            reset_url = f"http://127.0.0.1:8000/api/auth/reset-password/{token}"
-            reset_url_front = f"http://127.0.0.1:3000/reset-password/{token}"
+            reset_url = f"http://growbpo.com.br/api/auth/reset-password/{token}"
+            reset_url_front = f"http://growbpo.com.br/reset-password/{token}"
 
             # Lógica para envio do email de redefinição de senha
             subject = 'GROW BPO - Redefinição de senha'
