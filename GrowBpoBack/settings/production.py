@@ -2,7 +2,15 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['growbpo.com', '13.59.176.156']
+ALLOWED_HOSTS = [
+    'https://growbpo.com.br',
+    'https://www.growbpo.com.br',
+    'growbpo.com.br', 
+    'www.growbpo.com.br',
+    '127.0.0.1',
+    'localhost',
+    '3.19.140.120', 
+]
 
 DATABASES = {
     'default': {
@@ -20,3 +28,7 @@ SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
