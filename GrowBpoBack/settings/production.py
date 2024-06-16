@@ -5,6 +5,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'https://growbpo.com.br',
     'https://www.growbpo.com.br',
+    'http://growbpo.com.br',
+    'http://www.growbpo.com.br',
     'growbpo.com.br', 
     'www.growbpo.com.br',
     '127.0.0.1',
