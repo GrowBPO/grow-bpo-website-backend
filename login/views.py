@@ -182,22 +182,22 @@ class RedefinePasswordView(GenericAPIView):
             from_email = 'noreply@growbpo.com'
             to = email
 
-            email_message = EmailMultiAlternatives(subject, plain_message, from_email, [email])
-            email_message.attach_alternative(html_message, "text/html")
+            # email_message = EmailMultiAlternatives(subject, plain_message, from_email, [email])
+            # email_message.attach_alternative(html_message, "text/html")
 
-            image_path = os.path.join(settings.STATIC_ROOT, 'email/grow-nome-degrade.png')
-            try:
-                with open(image_path, 'rb') as img:
-                    mime_image = MIMEImage(img.read(), _subtype="png")
-                    mime_image.add_header('Content-ID', '<logo_image>')
-                    email_message.attach(mime_image)
-                    print("enviado")
-            except FileNotFoundError:
-                print("Erro: Arquivo de imagem não encontrado.")
+            # image_path = os.path.join(settings.STATIC_ROOT, 'email/grow-nome-degrade.png')
+            # try:
+            #     with open(image_path, 'rb') as img:
+            #         mime_image = MIMEImage(img.read(), _subtype="png")
+            #         mime_image.add_header('Content-ID', '<logo_image>')
+            #         email_message.attach(mime_image)
+            #         print("enviado")
+            # except FileNotFoundError:
+            #     print("Erro: Arquivo de imagem não encontrado.")
             
-            except Exception as e:
-                # Outros erros ao abrir ou anexar a imagem
-                print("Erro ao abrir ou anexar a imagem:", e)
+            # except Exception as e:
+            #     # Outros erros ao abrir ou anexar a imagem
+            #     print("Erro ao abrir ou anexar a imagem:", e)
 
             # Envia o email
             send_mail(subject, plain_message, from_email, [to], html_message=html_message)
